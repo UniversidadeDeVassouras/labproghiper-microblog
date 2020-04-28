@@ -1,4 +1,4 @@
-from usuario import Usuario
+from application.model.entity.usuario import Usuario
 
 class Autor(Usuario):
 

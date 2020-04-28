@@ -1,4 +1,4 @@
-from autenticacao_retorno import AutenticacaoRetorno
+from application.model.dao.autenticacao_retorno import AutenticacaoRetorno
 
 class UsuarioDAO:
 
@@ -22,7 +22,7 @@ class UsuarioDAO:
         return None
 
     def login(self, usuario_procurado):
-        usuario = self.get_usuario_por_email(usuario_procurado.get_email())
+        usuario = self._get_usuario_por_email(usuario_procurado.get_email())
         if usuario == None:
             return AutenticacaoRetorno(nao_existe = True)
         elif usuario_procurado.get_senha() == usuario.get_senha():
