@@ -1,6 +1,6 @@
 class AutenticacaoRetorno:
 
-    def __init__(self, sucesso = false, usuario = None, nao_existe = false, invalido = false):
+    def __init__(self, sucesso = False, usuario = None, nao_existe = False, invalido = False):
         self._sucesso = sucesso
         self._usuario = usuario
         self._nao_existe = nao_existe
@@ -10,7 +10,7 @@ class AutenticacaoRetorno:
         return self._sucesso
     
     def is_nao_existe(self):
-        return self._is_nao_existe
+        return self._nao_existe
 
     def is_invalido(self):
         return self._invalido
